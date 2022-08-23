@@ -7,29 +7,44 @@
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
+    <link rel="preload" as="font" href="./assets/Espana-light.woff2" type="font/woff2">
+    <script src="https://kit.fontawesome.com/ca767f7de3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="sidebar">
-        <div class="logo">
-            Logo
+        <div class="layer">
+            <div class="logo">
+                <img src="./assets/estudiames-logo.png" alt="Estudiames Logo">
+                <span>Estudiamos</span>
+            </div>
+            <ul class="nav">
+                <li><i class="fa-solid fa-house-user"></i><span>Home</span></li>
+                <li><i class="fa-solid fa-address-card"></i><span>Profile</span></li>
+                <li><i class="fa-solid fa-envelope"></i></i><span>Messages</span></li>
+                <li><i class="fa-solid fa-clock-rotate-left"></i><span>History</span></li>
+                <li><i class="fa-solid fa-list-check"></i><span>Tasks</span></li>
+                <li><i class="fa-solid fa-people-group"></i><span>Communities</span></li>
+            </ul>
+            <ul class="settings">
+                <li><i class="fa-solid fa-gear"></i><span>Settings</span></li>
+                <li><i class="fa-solid fa-circle-question"></i><span>Support</span></li>
+                <li><i class="fa-solid fa-shield-halved"></i><span>Privacy</span></li>
+            </ul>
         </div>
-        <ul class="nav">
-            <li>Home</li>
-            <li>Profile</li>
-            <li>Messages</li>
-            <li>History</li>
-            <li>Tasks</li>
-            <li>Communities</li>
-        </ul>
-        <ul class="settings">
-            <li>Settings</li>
-            <li>Support</li>
-            <li>Privacy</li>
-        </ul>
     </div>
     <div class="topbar">
-        <div class="search">Search bar</div>
-        <div class="profile">Notifications Avatar Username</div>
+        <div class="search">
+            <form action="/search" method="get">
+                <label for="search_bar"><i class="fa-solid fa-magnifying-glass"></i></label>
+                <input type="search" id="
+                search_bar" name="search_query">
+            </form>
+        </div>
+        <div class="profile">
+            <i class="fa-solid fa-bell"></i> 
+            <span class="avatar">D</span> 
+            <span class="username">Daniil Safonov</span>
+        </div>
     </div>
     <div class="middlebar">
         <div class="greeting">

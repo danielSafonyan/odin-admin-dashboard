@@ -1,5 +1,15 @@
+@font-face {  
+    font-family: 'Espana Light';  
+    font-weight: 400;  
+    font-style: normal;  
+    font-display: swap; 
+    src: url('./assets/Espana-light.woff2') format('woff2');
+}
+
 body {
     margin: 0;
+    height: 100vh;
+    width: 100vw;
   }
 
 .sidebar {
@@ -8,20 +18,111 @@ body {
 
 body {
     display: grid;
-    grid: "sidebar topbar" 1fr
-          "sidebar middlebar"1fr
+    grid: "sidebar topbar" 80px
+          "sidebar middlebar" 80px
           "sidebar main"4fr 
           / 1fr 4fr;
 }
 
 .sidebar {
     grid-area: sidebar;
-    background-color: bisque;
+    background: no-repeat center url(./assets/estudiames-background-cameron-stewart.jpg);
+    position: relative;
+    color: antiquewhite;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.logo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.logo > img {
+    max-width: 80px;
+}
+
+.logo > span {
+    font-size: 1.5rem;
+    font-family: 'Espana Light';
+    letter-spacing: .2rem;
+}
+
+.sidebar ul li {
+    list-style: none;
+    font-size: 1.5rem;
+    padding: 10px 0;
+}
+
+
+.sidebar ul li span {
+    margin-left: 20px;
+}
+
+.nav {
+    position: relative;
+    top: 20px;
+}
+
+.settings {
+    position: absolute;
+    bottom: 30px;
 }
 
 .topbar {
     grid-area: topbar;
-    background-color: blueviolet;
+    background-color: antiquewhite;
+    display: grid;
+    grid: 1fr /  2fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.search form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.search input {
+    font-size: inherit;
+    padding: 3px 10px;
+    border-radius: 55px;
+    width: clamp(100px, 50%, 500px);
+    border: none;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile .avatar {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .middlebar {
