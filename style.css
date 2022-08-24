@@ -94,7 +94,7 @@ body {
 }
 
 .search form {
-    width: 100%;
+    width: 80%;
     display: flex;
     /* justify-content: center; */
     align-items: center;
@@ -175,6 +175,8 @@ right: 20px;
     padding: 5px 5px;
     width: 65px;
     background-color: red;
+    color: rgb(255, 218, 45);
+    /* font-weight: 700; */
     border-radius: 55px;
     text-align: center;
     cursor: pointer;
@@ -182,5 +184,122 @@ right: 20px;
 
 .main {
     grid-area: main;
-    background-color: wheat;
+    background-color: rgba(250, 234, 216, 0.4);
+    display: grid;
+    grid: 
+    "projects announcements" 1fr 
+    "projects trending" 1fr 
+    / 3fr 1fr;
+    column-gap: 20px;
+    min-height: 0px;
+    padding-bottom: 10px;
 }
+
+.projects {
+    position: relative;
+    padding-top: 40px;
+    grid-area: projects;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 220px;
+    grid-row-gap: 20px;
+    overflow: scroll;
+    
+}
+
+.content-type {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.project {
+    position: relative;
+    /* border: 1px solid black; */
+    border-left: 5px solid rgb(255, 218, 45);
+    background-color: rgba(250, 234, 216, 0.6);
+    /* border-top-left-radius: 10px 10px;
+    border-bottom-left-radius: 10px 10px; */
+    border-radius: 10px;
+    padding: 20px 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.pr-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.pr-buttons {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.announcements {
+    padding-top: 40px;
+    grid-area: announcements;
+    position: relative;
+}
+
+.ann-wrapper {
+    padding: 10px 20px;
+    /* border: 1px solid black; */
+    background-color: rgba(250, 234, 216, 0.6);
+
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.ann-content {
+    padding: 5px 0;
+}
+
+.ann-content:nth-child(even) {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.ann-title  {
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.trending {
+    padding-top: 40px;
+    grid-area: trending;
+    position: relative;
+}
+
+.trend-wrapper {
+        padding: 5px 20px;
+        /* border: 1px solid black; */
+        background-color: rgba(250, 234, 216, 0.6);
+        border-radius: 10px;
+        margin-right: 20px;
+}
+
+.tr-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tr-profile .avatar {
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+
